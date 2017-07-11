@@ -1,23 +1,13 @@
+import React from 'react';
+import { render } from 'react-dom';
+import { hello, goodbye } from './lib';
 
-const style = {
-  backgroundColor: '#222',
-  color: '#ddd',
-  fontFamily: 'sans-serif',
-  border: "3px solid #555",
-  textAlign: "center"
-}
+render(
+  <div>
+    {hello}
+    {goodbye}
+  </div>,
+  document.getElementById('react-container'),
+);
 
-
-// const title = React.createElement(
-//   'h1',
-//   { id: 'title', className: 'header', style: style },
-//   'Hello World'
-// );
-
-ReactDOM.render(
-  <h1 id='title'
-      className='header'
-      style={style}>
-  Hello there!!!
-  </h1>,
-  document.getElementById('react-container'));
+console.log(goodbye);

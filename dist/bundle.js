@@ -33,6 +33,9 @@
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -65,14 +68,32 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
+var style = {
+  backgroundColor: '#222',
+  color: '#ddd',
+  fontFamily: 'sans-serif',
+  border: '3px solid #555',
+  textAlign: 'center'
+};
 
-const title = React.createElement('h1',{id: 'title',className: 'header'},'He World');
+// const title = React.createElement(
+//   'h1',
+//   { id: 'title', className: 'header', style: style },
+//   'Hello World'
+// );
 
-ReactDOM.render(title, document.getElementById('react-container'));
-
+ReactDOM.render(React.createElement(
+  'h1',
+  { id: 'title',
+    className: 'header',
+    style: style },
+  'Hello there!!!'
+), document.getElementById('react-container'));
 
 /***/ })
 /******/ ]);
