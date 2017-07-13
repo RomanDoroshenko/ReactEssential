@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import fitdayscount from '../scss/fitdaycount.scss';
+import '../scss/fitdaycount.scss';
 
 // class FitDayCount extends React.Component {
 //   render() {
@@ -23,7 +23,8 @@ import fitdayscount from '../scss/fitdaycount.scss';
 const FitDayCount = props => (
   <div className="fit-day-count">
     <div className="total-days">
-      <span>{ props.totalDays }</span>
+      <span>Total days: { props.totalDays }</span><br />
+      <span className="goal">Goal: 31</span>
     </div>
     <div className="group-workout-days">
       <span>{ props.groupDays }</span>
