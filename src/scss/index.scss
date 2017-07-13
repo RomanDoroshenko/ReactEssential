@@ -1,6 +1,15 @@
-$bg-color: #222;
-$text-color: #ddd;
+* {
+  margin: 0;
+  padding: 0;
+  color: #eee;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,body {
 
-.fit-day-count {
-  border: 5px solid black;
+  height: 100%;
+}
+
+body {
+  background: #2196f3;
 }

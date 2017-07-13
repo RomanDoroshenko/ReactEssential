@@ -5,6 +5,10 @@ import FitDayCount from './components/FitDayCount';
 
 
 render(
-  <FitDayCount />,
+  <FitDayCount
+    totalDays={30}
+    groupDays={20}
+    atWorkDays={40}
+  />,
   document.getElementById('react-container'),
 );

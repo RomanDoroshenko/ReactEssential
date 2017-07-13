@@ -10207,6 +10207,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(49);
 
 var _react2 = _interopRequireDefault(_react);
@@ -10217,39 +10219,60 @@ var _fitdaycount2 = _interopRequireDefault(_fitdaycount);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function FitDayCount() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'fit-day-count' },
-    _react2.default.createElement(
-      'div',
-      { className: 'total-days' },
-      _react2.default.createElement(
-        'span',
-        null,
-        '4 days total'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'group-workout-days' },
-      _react2.default.createElement(
-        'span',
-        null,
-        '2 days group'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'execize-at-work-days' },
-      _react2.default.createElement(
-        'span',
-        null,
-        '3 days at work'
-      )
-    )
-  );
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FitDayCount = function (_React$Component) {
+  _inherits(FitDayCount, _React$Component);
+
+  function FitDayCount() {
+    _classCallCheck(this, FitDayCount);
+
+    return _possibleConstructorReturn(this, (FitDayCount.__proto__ || Object.getPrototypeOf(FitDayCount)).apply(this, arguments));
+  }
+
+  _createClass(FitDayCount, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'fit-day-count' },
+        _react2.default.createElement(
+          'div',
+          { className: 'total-days' },
+          _react2.default.createElement(
+            'span',
+            null,
+            '456 days total'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'group-workout-days' },
+          _react2.default.createElement(
+            'span',
+            null,
+            '456 days group'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'execize-at-work-days' },
+          _react2.default.createElement(
+            'span',
+            null,
+            '46 days at work'
+          )
+        )
+      );
+    }
+  }]);
+
+  return FitDayCount;
+}(_react2.default.Component);
 
 exports.default = FitDayCount;
 
@@ -10317,7 +10340,11 @@ var _FitDayCount2 = _interopRequireDefault(_FitDayCount);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(_FitDayCount2.default, null), document.getElementById('react-container'));
+(0, _reactDom.render)(_react2.default.createElement(_FitDayCount2.default, {
+  totalDays: '30',
+  groupDays: '20',
+  atWorkDays: '40'
+}), document.getElementById('react-container'));
 
 /***/ }),
 /* 88 */
@@ -11208,7 +11235,7 @@ exports = module.exports = __webpack_require__(50)(undefined);
 
 
 // module
-exports.push([module.i, ".fit-day-count {\n  border: 1px solid black; }\n", ""]);
+exports.push([module.i, ".fit-day-count {\n  text-align: center; }\n\n.total-days {\n  padding-top: 40px;\n  font-size: 38px; }\n\n.group-workout-days, .execize-at-work-days {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  margin-top: 40px;\n  padding: 30px; }\n", ""]);
 
 // exports
 
@@ -11222,7 +11249,7 @@ exports = module.exports = __webpack_require__(50)(undefined);
 
 
 // module
-exports.push([module.i, ".fit-day-count {\n  border: 5px solid black; }\n", ""]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  color: #eee;\n  box-sizing: border-box;\n  font-family: sans-serif; }\n\nhtml, body {\n  height: 100%; }\n\nbody {\n  background: #2196f3; }\n", ""]);
 
 // exports
 

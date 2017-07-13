@@ -1,3 +1,33 @@
 .fit-day-count {
-  border: 1px solid black;
+  text-align: center;
+}
+
+.total-days, .group-workout-days, .execize-at-work-days {
+ border: 1px solid white;
+
+}
+
+
+.total-days {
+
+ border: none;
+  border-bottom: 0.01px solid #ccc;
+  padding: 40px;
+  font-size: 38px;
+
+}
+
+.group-workout-days {
+  margin-right: 20px;
+}
+
+.group-workout-days, .execize-at-work-days {
+  display: inline-flex;
+  margin-top: 40px;
+  padding: 30px;
+  border-radius: 3%;
+
+
+
+
 }
