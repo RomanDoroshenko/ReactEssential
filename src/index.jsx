@@ -9,6 +9,7 @@ render(
     totalDays={12}
     groupDays={20}
     atWorkDays={40}
+    goalDays={31}
   />,
   document.getElementById('react-container'),
 );
