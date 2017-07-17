@@ -19,33 +19,51 @@ import '../scss/fitdaycount.scss';
 // calcGoalProgress(props.totalDays / props.goalDays)
 
 const FitDayCount = (props) => {
+  const totalActs = props.atWorkDays + props.groupDays;
   const calcGoalProgress = (total, goal) => (`${Math.round((total / goal) * 100)} %`);
   return (
     <div className="fit-day-count">
-      <h1>Fit Days Counter</h1>
-      <div className="card atWorkDays">
-        <div className="card-description"><span>At work Days</span></div>
-        <div className="card-value">{props.atWorkDays}</div>
-      </div>
-      <div className="card GroupDays">
-        <div className="card-description"><span>Group Days</span></div>
-        <div className="card-value">{props.groupDays}</div>
-      </div>
-      <div className="card goal">
-        <div className="card-description"><span>GOAL</span></div>
-        <div className="card-value">{props.totalDays}</div>
-      </div>
-      <div className="card totalDays">
-        <div className="card-description"><span>TOTAL</span></div>
-        <div className="card-value">
-          ({calcGoalProgress(props.totalDays, props.goalDays)}) {props.totalDays}
+
+      <div className="heading">Fit Days Counter</div>
+
+      <div className="container">
+
+        <div className="table-container stats">
+          <div className="t-header t-row">
+            <span className="entry-description">Stats</span>
+          </div>
+          <div className=" t-row">
+            <span className="entry-description">Goal</span>
+            <span className="entry-value">{props.goalDays}</span>
+          </div>
+          <div className="t-row">
+            <span className="entry-description">Progress</span>
+            <span className="entry-value">{calcGoalProgress(totalActs, props.goalDays)}</span>
+          </div>
         </div>
+
+        <div className="table-container">
+          <div className="t-header t-row">
+            <span className="entry-description">Activity</span>
+            <span className="entry-value">Days</span>
+          </div>
+          <div className="t-row atWorkDays">
+            <div className="t-row-description"><span>At work</span></div>
+            <div className="t-row-value">{props.atWorkDays}</div>
+          </div>
+          <div className="t-row GroupDays">
+            <div className="t-row-description"><span>Group workout</span></div>
+            <div className="t-row-value">{props.groupDays}</div>
+          </div>
+        </div>
+
       </div>
+
+
     </div>);
 };
 
 FitDayCount.propTypes = {
-  totalDays: PropTypes.number.isRequired,
   groupDays: PropTypes.number.isRequired,
   atWorkDays: PropTypes.number.isRequired,
   goalDays: PropTypes.number.isRequired,

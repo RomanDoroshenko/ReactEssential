@@ -2,29 +2,57 @@
   text-align: center;
 }
 
-h1{
-  padding: 10px;
-  font-weight: 400;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
 }
 
-.card {
-  width: 85%;
-  max-width: 400px;
-  padding: 15px;
-  height: auto;
-  border-radius: 3%;
+.heading {
+  text-align: left;
+  font: small-caps 800 22px/150% Rubik, sans-serif;
+  text-transform: lowercase;
+  background-image: url('https://cdn3.iconfinder.com/data/icons/fitness-icons/32/Heart_Check-512.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  padding-left: 40px;
+  margin-left: 20px;
+}
+
+.table-container {
+  width: 90vw;
   margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  max-width: 900px;
+}
+
+
+
+.t-row {
+  width: 100%;
+  padding: 12px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   background-color: #303f47;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-bottom: 1.3px solid #263238;
 
-    .card-value {
-      font-size: 2em;
-    }
-
-    .card-description span  {
+    .entry-description  {
       position: relative;
       top: 25%;
     }
+}
+
+.t-header  {
+  background-color: #263238;
+  font-size: 14px;
+  border-bottom: 1px solid #546E7A;
+
+
+
+  .entry-description, .entry-value {
+    color: #B0BEC5;
+    text-transform: uppercase;
+  }
 }
