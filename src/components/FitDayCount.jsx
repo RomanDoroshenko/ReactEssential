@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Run from 'react-icons/lib/md/directions-run';
+import Chart from 'react-icons/lib/md/insert-chart';
 import '../scss/fitdaycount.scss';
 
 
@@ -18,7 +20,10 @@ class FitDayCount extends React.Component {
         <div className="container">
           <div className="table-container stats">
             <div className="t-header t-row">
-              <span className="entry-description">Stats</span>
+              <div className="entry-description">
+                <Chart />
+                <span >Stats</span>
+              </div>
             </div>
             <div className=" t-row">
               <span className="entry-description">Goal</span>
@@ -31,9 +36,12 @@ class FitDayCount extends React.Component {
               </span>
             </div>
           </div>
-          <div className="table-container">
+          <div className="table-container acts">
             <div className="t-header t-row">
-              <span className="entry-description">Activity</span>
+              <div className="entry-description">
+                <Run />
+                <span >Activity</span>
+              </div>
               <span className="entry-value">Days</span>
             </div>
             <div className="t-row atWorkDays">
