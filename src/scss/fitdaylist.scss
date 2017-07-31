@@ -1,0 +1,30 @@
+table {
+  width: 90vw;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  max-width: 900px;
+}
+
+thead tr {
+  background-color: #263238;
+  font-size: 14px;
+  border-bottom: 1px solid #546E7A;
+  color: #B0BEC5;
+  text-transform: uppercase;
+}
+
+tr {
+  width: 100%;
+  padding: 12px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #303f47;
+  border-bottom: 1.3px solid #263238;
+}
+
+
+th, td {
+  width: 25%;
+  text-align: center;
+}
