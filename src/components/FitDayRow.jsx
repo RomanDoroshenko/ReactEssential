@@ -22,3 +22,7 @@ FitDayRow.propTypes = {
   note: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
+
+FitDayRow.defaultProps = {
+  note: '...',
+};

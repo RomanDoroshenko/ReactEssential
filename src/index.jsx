@@ -21,7 +21,7 @@ render(
     {
       date: new Date('7/30/2017'),
       duration: 30,
-      note: 'hello',
+      
       type: {
         Group: false,
         AtWork: true,
